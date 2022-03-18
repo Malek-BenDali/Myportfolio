@@ -1,0 +1,24 @@
+.home-container {
+	box-sizing: border-box;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("../assets/backgroundImage.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	color: white;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1%;
+	color: var(--color-darkwhite);
+	padding-left: 15%;
+}
+.home-container h2 {
+	font-size: 3.5rem;
+}
+.color-primary {
+	color: var(--color-primary);
+}

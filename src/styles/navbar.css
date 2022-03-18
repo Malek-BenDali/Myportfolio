@@ -1,0 +1,43 @@
+.navbar-container {
+	height: 10vh;
+	min-height: 5rem;
+	box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: var(--color-darkwhite);
+	backdrop-filter: blur(5px);
+	position: fixed;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding: 0% 10%;
+	justify-content: space-between;
+}
+.navbar-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.navbar-name h1 {
+	font-size: 2rem;
+}
+.special-charactere {
+	margin-left: 0.5rem;
+	color: var(--color-primary);
+}
+.navbar-content {
+	display: flex;
+	gap: 1.5rem;
+	font-size: 1rem;
+}
+.navbar-details {
+	transition: color 0.3s ease-in-out;
+}
+.letter {
+	overflow: hidden;
+}
+.navbar-details:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	color: var(--color-primary);
+}
