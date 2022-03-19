@@ -56,7 +56,6 @@ function Navbar() {
 				<h2 className="navbar-details">Services</h2>
 				<h2 className="navbar-details">Pojects</h2>
 				<h2 className="navbar-details">About</h2>
-				<h2 className="navbar-details">Contact</h2>
 			</div>
 		</div>
 	)

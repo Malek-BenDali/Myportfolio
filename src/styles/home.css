@@ -22,3 +22,33 @@
 .color-primary {
 	color: var(--color-primary);
 }
+.contact-button {
+	width: 0vw;
+	height: 3.5rem;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	border: 2px solid var(--color-darkwhite);
+	color: var(--color-darkwhite);
+	font-size: 1.5rem;
+	overflow-x: hidden;
+	transition: color 0.3s ease-in-out;
+	transition: background 0.3s ease-in-out;
+}
+.contact-button:hover {
+	color: var(--color-primary);
+	background: var(--color-darkwhite);
+	border: 3px solid var(--color-primary);
+	cursor: pointer;
+}
+.hid {
+	overflow: hidden;
+}
+.home-explore {
+	position: absolute;
+	bottom: 5vh;
+	left: 50%;
+}
+.home-explore p {
+	left: -50%;
+	position: relative;
+}
