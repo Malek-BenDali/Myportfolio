@@ -1,10 +1,11 @@
 import { useEffect } from "react"
 import gsap from "gsap"
 import { TextPlugin } from "gsap/TextPlugin"
-import { downArrow } from "../assets/icons"
+import { useWidth } from "../hooks"
 import "../styles/home.css"
 
 function Home() {
+	const width = useWidth()
 	gsap.registerPlugin(TextPlugin)
 	useEffect(() => {
 		const tl = gsap.timeline({
@@ -19,7 +20,7 @@ function Home() {
 			y: "-100%",
 		})
 		tl.to(".contact-button", {
-			width: "20vw",
+			width: width > 1000 ? "20vw" : width > 600 ? "40vw" : "70vw",
 		})
 		tl.to(".contact-button", 1, { text: "Contact me" })
 		gsap.set(".arrow-down", { marginTop: "1rem" })
@@ -34,12 +35,12 @@ function Home() {
 
 	return (
 		<>
-			<div className="home-container">
+			<div id="home" className="home-container">
 				<h2 className="text1"></h2>
 				<h2 className="text2"></h2>
 				<h2 className="color-primary text3"></h2>
 				<div className="hid">
-					<button className="contact-button"></button>
+					<div className="contact-button"></div>
 				</div>
 				<div className="home-explore">
 					<p> scroll to explore </p>

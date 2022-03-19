@@ -33,6 +33,9 @@
 	overflow-x: hidden;
 	transition: color 0.3s ease-in-out;
 	transition: background 0.3s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .contact-button:hover {
 	color: var(--color-primary);
@@ -51,4 +54,9 @@
 .home-explore p {
 	left: -50%;
 	position: relative;
+}
+@media (max-width: 1000px) {
+	.home-container h2 {
+		font-size: 2.5rem;
+	}
 }

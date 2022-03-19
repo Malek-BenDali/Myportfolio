@@ -1,3 +1,4 @@
 import Navbar from "./Navbar"
 import Home from "./Home"
-export { Navbar, Home }
+import Services from "./Services"
+export { Navbar, Home, Services }

@@ -1,11 +1,14 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useWidth } from "../hooks"
-import gsap, { Elastic } from "gsap"
+import gsap from "gsap"
 import "../styles/navbar.css"
+import { DrawerMenu } from "../Components"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
 function Navbar() {
+	gsap.registerPlugin(ScrollToPlugin)
 	const width = useWidth()
-
+	const [openMenu, setOpenMenu] = useState(false)
 	useEffect(() => {
 		const tl = gsap.timeline({
 			defaults: {
@@ -34,13 +37,18 @@ function Navbar() {
 	const firstName = "alek".split("")
 	const secondName = "en".split("")
 	const lastName = "ali".split("")
+	const handleNavigation = scrollTo => {
+		gsap.to(window, { duration: 1, scrollTo })
+	}
 
 	return (
 		<div className="navbar-container">
-			<h1 className="navbar-name">
+			<div className="navbar-name">
 				<h1 className="special-charactere">M</h1>
-				{firstName.map(caracter => (
-					<span className="letter">{caracter}</span>
+				{firstName.map((caracter, i) => (
+					<span className="letter" key={i}>
+						{caracter}
+					</span>
 				))}
 				<h1 className="special-charactere">B</h1>
 				{secondName.map(caracter => (
@@ -50,13 +58,51 @@ function Navbar() {
 				{lastName.map(caracter => (
 					<span className="letter">{caracter}</span>
 				))}
-			</h1>
-			<div className="navbar-content">
-				<h2 className="navbar-details">Home</h2>
-				<h2 className="navbar-details">Services</h2>
-				<h2 className="navbar-details">Pojects</h2>
-				<h2 className="navbar-details">About</h2>
 			</div>
+			{width > 1000 ? (
+				<div className="navbar-content">
+					<h2
+						onClick={() => handleNavigation("#home")}
+						className="navbar-details"
+					>
+						Home
+					</h2>
+					<h2
+						onClick={() => handleNavigation("#service")}
+						className="navbar-details"
+					>
+						Services
+					</h2>
+					<h2
+						onClick={() => handleNavigation("#project")}
+						className="navbar-details"
+					>
+						Pojects
+					</h2>
+					<h2
+						onClick={() => handleNavigation("#about")}
+						className="navbar-details"
+					>
+						About
+					</h2>
+				</div>
+			) : (
+				<>
+					<div onClick={() => setOpenMenu(true)}>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="26"
+							height="24"
+							viewBox="0 0 24 24"
+							className="navbar-details"
+							fill="#eee"
+						>
+							<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+						</svg>
+					</div>
+					{openMenu && <DrawerMenu setOpenMenu={setOpenMenu} />}
+				</>
+			)}
 		</div>
 	)
 }

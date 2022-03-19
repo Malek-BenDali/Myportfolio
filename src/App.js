@@ -1,10 +1,11 @@
-import { Navbar, Home } from "./container"
+import { Navbar, Home, Services } from "./container"
 
 function App() {
 	return (
 		<>
 			<Navbar />
 			<Home />
+			<Services />
 		</>
 	)
 }
