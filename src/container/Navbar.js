@@ -4,9 +4,11 @@ import gsap from "gsap"
 import "../styles/navbar.css"
 import { DrawerMenu } from "../Components"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { ScrollTrigger } from "gsap/all"
 
 function Navbar() {
 	gsap.registerPlugin(ScrollToPlugin)
+	gsap.registerPlugin(ScrollTrigger)
 	const width = useWidth()
 	const [openMenu, setOpenMenu] = useState(false)
 	useEffect(() => {
@@ -34,6 +36,24 @@ function Navbar() {
 			"<20%"
 		)
 	}, [])
+	useEffect(() => {
+		const tlSplit = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".navbar-container",
+				start: "100%",
+				end: "400%",
+				scrub: true,
+				markers: {
+					startColor: "red",
+					endColor: "red",
+				},
+			},
+		})
+		tlSplit.to(".navbar-container", {
+			backgroundColor: "rgba(0,0,0,0.7)",
+		})
+	}, [])
+
 	const firstName = "alek".split("")
 	const secondName = "en".split("")
 	const lastName = "ali".split("")
@@ -100,7 +120,12 @@ function Navbar() {
 							<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
 						</svg>
 					</div>
-					{openMenu && <DrawerMenu setOpenMenu={setOpenMenu} />}
+					{openMenu && (
+						<DrawerMenu
+							setOpenMenu={setOpenMenu}
+							handleNavigation={handleNavigation}
+						/>
+					)}
 				</>
 			)}
 		</div>

@@ -23,7 +23,8 @@
 	color: var(--color-primary);
 }
 .contact-button {
-	width: 0vw;
+	z-index: 0;
+	width: 20vw;
 	height: 3.5rem;
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
@@ -55,8 +56,19 @@
 	left: -50%;
 	position: relative;
 }
+.service-container {
+	height: 100vh;
+}
 @media (max-width: 1000px) {
 	.home-container h2 {
 		font-size: 2.5rem;
+	}
+	.contact-button {
+		width: 40vw;
+	}
+}
+@media (max-width: 600px) {
+	.contact-button {
+		width: 70vw;
 	}
 }
