@@ -3,11 +3,9 @@ import gsap from "gsap"
 import { TextPlugin } from "gsap/TextPlugin"
 import { useWidth } from "../hooks"
 import "../styles/home.css"
-import { ScrollTrigger } from "gsap/all"
 
 function Home() {
 	gsap.registerPlugin(TextPlugin)
-	gsap.registerPlugin(ScrollTrigger)
 
 	useEffect(() => {
 		const tl = gsap.timeline({
@@ -15,12 +13,9 @@ function Home() {
 				duration: 0.5,
 			},
 		})
-		tl.to(".text1", 0.5, { text: "Hello,", delay: 0 })
+		tl.to(".text1", 0.5, { text: "Hello,", delay: 2.7 })
 		tl.to(".text2", 0.5, { text: "My Name Is" })
 		tl.to(".text3", 0.5, { text: "Malek" })
-		tl.from(".contact-button", {
-			y: "-100%",
-		})
 		tl.from(".contact-button", {
 			width: "0vw",
 			opacity: 0,
@@ -34,34 +29,6 @@ function Home() {
 			repeat: -1,
 			duration: 0.5,
 		})
-	}, [])
-	useEffect(() => {
-		const tlSplit = gsap.timeline({
-			scrollTrigger: {
-				trigger: ".home-container",
-				start: "0%",
-				end: "20%",
-				scrub: true,
-				markers: {
-					startColor: "pink",
-					endColor: "pink",
-				},
-			},
-		})
-
-		tlSplit.fromTo(
-			".contact-button",
-			{
-				position: "fixed",
-				left: "15vw",
-				bottom: "28%",
-			},
-			{
-				position: "fixed",
-				left: "75vw",
-				bottom: "5%",
-			}
-		)
 	}, [])
 
 	return (

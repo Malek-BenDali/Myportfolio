@@ -1,4 +1,4 @@
-import { Navbar, Home, Services } from "./container"
+import { Navbar, Home, Services, Projects } from "./container"
 
 function App() {
 	return (
@@ -6,6 +6,7 @@ function App() {
 			<Navbar />
 			<Home />
 			<Services />
+			<Projects />
 		</>
 	)
 }

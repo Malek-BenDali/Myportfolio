@@ -43,10 +43,10 @@ function Navbar() {
 				start: "100%",
 				end: "400%",
 				scrub: true,
-				markers: {
-					startColor: "red",
-					endColor: "red",
-				},
+				//markers: {
+				//	startColor: "red",
+				//	endColor: "red",
+				//},
 			},
 		})
 		tlSplit.to(".navbar-container", {
