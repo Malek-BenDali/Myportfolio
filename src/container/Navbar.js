@@ -58,7 +58,7 @@ function Navbar() {
 	const secondName = "en".split("")
 	const lastName = "ali".split("")
 	const handleNavigation = scrollTo => {
-		gsap.to(window, { duration: 1, scrollTo })
+		gsap.to(window, { duration: 0.75, scrollTo })
 	}
 
 	return (

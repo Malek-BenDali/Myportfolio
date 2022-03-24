@@ -33,17 +33,17 @@ function Services() {
 			</p>
 			<div className="card-container">
 				<div className="service-card">
-					<img className="card-image" src={front} />
+					<img className="card-image" src={front} alt="frontend" />
 					<h2> Frontend </h2>
 					<p>
 						To build a responsive dynamic web app, I use React library or Next
 						js Framework, Redux to manage the data and finally CSS/tailwind to
 						improve the styling of the app
 					</p>
-					<h3>2 years experience </h3>
+					<h3>1.5 year experience </h3>
 				</div>
 				<div className="service-card ">
-					<img className="card-image" src={server} />
+					<img className="card-image" src={server} alt="server" />
 					<h2> Backend </h2>
 					<p>
 						To build a server side app, I usually use Node js as a runtime
@@ -53,7 +53,7 @@ function Services() {
 					<h3>1 year experience </h3>
 				</div>
 				<div className="service-card ">
-					<img className="card-image" src={cloud} />
+					<img className="card-image" src={mobile} alt="frontend" />
 					<h2> Mobile dev </h2>
 					<p>
 						I use React Native Framework to build native mobile apps and Redux
