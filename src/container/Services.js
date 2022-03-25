@@ -1,5 +1,4 @@
-import { useEffect } from "react"
-import { front, cloud, mobile, server } from "../assets"
+import { front, mobile, server } from "../assets"
 //import gsap from "gsap"
 //import { ScrollTrigger } from "gsap/all"
 
