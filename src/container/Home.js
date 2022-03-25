@@ -1,11 +1,13 @@
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 import gsap from "gsap"
 import { TextPlugin } from "gsap/TextPlugin"
 import { useWidth } from "../hooks"
 import "../styles/home.css"
+import { Contact } from "../Components"
 
 function Home() {
 	gsap.registerPlugin(TextPlugin)
+	const [openContact, setOpenContact] = useState(false)
 
 	useEffect(() => {
 		const tl = gsap.timeline({
@@ -37,7 +39,10 @@ function Home() {
 			<h2 className="text2"></h2>
 			<h2 className="color-primary text3"></h2>
 			<div className="hid">
-				<div className="contact-button"></div>
+				<div
+					className="contact-button"
+					onClick={() => setOpenContact(true)}
+				></div>
 			</div>
 			<div className="home-explore">
 				<p> scroll to explore </p>
@@ -55,6 +60,7 @@ function Home() {
 					/>
 				</svg>
 			</div>
+			{openContact && <Contact setOpenContact={setOpenContact} />}
 		</div>
 	)
 }

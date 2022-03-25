@@ -57,14 +57,14 @@
 	position: relative;
 }
 .service-container {
-	min-height: 100vh;
+	min-height: 80vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 .card-container {
-	margin-top: 10%;
+	margin-top: 5%;
 	display: flex;
 	justify-content: space-evenly;
 	width: 100%;
@@ -92,7 +92,6 @@
 	flex: 3;
 	min-height: 40%;
 	margin-top: 5%;
-	text-align: justify;
 }
 .service-card h2 {
 	/*flex: 1;*/
@@ -209,6 +208,10 @@
 @media (max-width: 600px) {
 	.contact-button {
 		width: 70vw;
+	}
+	.service-container {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 	.service-card {
 		box-sizing: border-box;

@@ -1,2 +1,3 @@
 import DrawerMenu from "./DrawerMenu"
-export { DrawerMenu }
+import Contact from "./Contact"
+export { DrawerMenu, Contact }

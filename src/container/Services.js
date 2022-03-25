@@ -26,11 +26,6 @@ function Services() {
 	return (
 		<div id="service" className="service-container">
 			<h1 className="primary-color">SERVICES</h1>
-			<p>
-				sufhqsuiodfh qsiodhfqsduiof huisdoph fuioqs duf hqsduioh fuoqsd
-				hfohqsduofhqsduiohf sdio sdioàf hqsdio^hqsdiof hsdoiq hqsdiof
-				hqsduiofhqsdiohf
-			</p>
 			<div className="card-container">
 				<div className="service-card">
 					<img className="card-image" src={front} alt="frontend" />
