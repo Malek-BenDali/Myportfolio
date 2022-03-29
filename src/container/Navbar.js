@@ -39,9 +39,9 @@ function Navbar() {
 	useEffect(() => {
 		const tlSplit = gsap.timeline({
 			scrollTrigger: {
-				trigger: ".navbar-container",
-				start: "100%",
-				end: "400%",
+				trigger: ".home-container",
+				start: "0%",
+				end: "20%",
 				scrub: true,
 				//markers: {
 				//	startColor: "red",
@@ -99,12 +99,12 @@ function Navbar() {
 					>
 						Pojects
 					</h2>
-					<h2
+					{/*<h2
 						onClick={() => handleNavigation("#about")}
 						className="navbar-details"
 					>
 						About
-					</h2>
+					</h2>*/}
 				</div>
 			) : (
 				<>

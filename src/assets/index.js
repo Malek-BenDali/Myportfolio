@@ -7,6 +7,7 @@ import GDE from "./gde.jpg"
 import satoripop from "./satoripop.jpg"
 import tracker from "./tracker.jpg"
 import api from "./api.png"
+import photo from "./photo.jpeg"
 export {
 	backgroundImage,
 	front,
@@ -17,4 +18,5 @@ export {
 	satoripop,
 	tracker,
 	api,
+	photo,
 }
