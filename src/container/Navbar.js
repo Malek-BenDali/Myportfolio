@@ -63,7 +63,10 @@ function Navbar() {
 
 	return (
 		<div className="navbar-container">
-			<div className="navbar-name">
+			<div
+				className="navbar-name"
+				onClick={() => (width < 1000 ? handleNavigation("#home") : {})}
+			>
 				<h1 className="special-charactere">M</h1>
 				{firstName.map((caracter, i) => (
 					<span className="letter" key={i}>
